@@ -1,0 +1,88 @@
+  /*Zane Brant
+  5-27-2014
+  Sets the appearence of the "fifteen" puzzle page. All page
+  elements are centered. The puzzle is 400x400, so any image
+  used must match that resolution to appear properly.*/
+
+body {
+	cursor: default;
+	font-family: Verdana, Tahoma, sans-serif;
+	text-align: center;
+	background-image: url('bgs/blue.jpg');
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+
+/*Makes the text and border of a piece red*/
+.highlight {
+	border: 5px solid red !important;	
+	cursor: pointer;
+	color: red !important;
+}
+
+#puzzlearea {
+	height: 400px;
+	margin-right: auto; 
+	margin-left: auto;
+	position: relative;
+	width: 400px;
+} 
+
+#puzzlearea div {
+	/*Sets puzzle image. Must be 400x400 resolution*/
+	color: yellow;
+	border: 5px solid black;	
+	font-size: 40pt;
+	height: 90px;
+	position: absolute;
+	width: 90px;
+	text-align: center;
+}
+
+#buttons {
+	width: 370px;
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#buttons p {
+	margin: 5px;
+}
+#buttons select {
+	margin-bottom: 20px;
+}
+
+p {
+	width: 750px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#changebackground {
+	float: left;
+	margin-top: 20px;
+	margin-left: 40px;
+	padding: 13px;
+	background-color: rgba(255, 241, 231, 0.8);
+}
+
+#changebackground:hover {
+	background-color: rgba(234, 207, 82, 0.8);
+	cursor: pointer;
+}
+
+#main {
+	background-color: rgba(255, 241, 231, 0.8); 
+	width: 875px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 13px;
+}
+
+#w3c {
+	float: right;
+}

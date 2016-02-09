@@ -1,0 +1,81 @@
+<!--Zane Brant
+  5-27-2014
+  The base webpage for Zane's "Fifteen" puzzle. 
+  Intially, the pre-set image is displayed in the puzzle area,
+  and the pieces aren't shuffled. If the user clicks "shuffle",
+  the pieces will be randomly moved, scrambling the image. When
+  the cursor is above a movable piece, it turns red, and clicking
+  it will cause it to swap posistion with the empty space. The user
+  can also play music, change the puzzle pic, and change the 
+  background image. 
+  The goal is to restore the image's intial arrangement.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zane's "Fifteen" Puzzle</title>
+
+		<link href="https://webster.cs.washington.edu/images/fifteen/fifteen.gif"
+		      type="image/gif" rel="shortcut icon" />
+		<link href="fifteen.css" type="text/css" rel="stylesheet" />
+		<link href="superfish.css" type="text/css" rel="stylesheet" />
+		<script src="fifteen.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="changebackground">
+			<img src="exchange32.png" />
+		</div>
+		<div id="main"> 
+			<h1>"Fifteen" Picture Puzzle</h1>
+
+			<fieldset id="buttons">
+				<legend>Puzzle Options:</legend>
+					<p> Choose a different puzzle image: </p>
+					<select id="puzzlepic">
+						<option value="mushroom.jpg" selected>Mushroom House</option> <!--List of available puzzle pics-->
+						<option value="halloween.jpg">Pumpkin</option>
+						<option value="dawgs.jpg">Woof!</option>
+					</select> 
+				 	<p> Music for your puzzle-solving-pleasure: </p>
+				 	<audio controls>
+	  					<source src="Mozart.mp3" type="audio/mpeg"> <!--Playable music-->
+
+						Your browser does not support the audio element.
+				</audio> 
+			</fieldset>
+
+			<p>
+				The goal of the fifteen puzzle is to un-jumble its fifteen squares
+				by repeatedly making moves that slide squares into the empty space.
+				How quickly can you solve it?
+			</p>
+			
+			<div id="puzzlearea">
+			</div>
+
+			<p id="controls">
+				<button id="shufflebutton">Shuffle</button>
+			</p>
+			
+			<div id="output"></div>
+			
+			<p>
+				American puzzle author and mathematician Sam Loyd is often falsely
+				credited with creating the puzzle; indeed, Loyd claimed from 1891
+				until his death in 1911 that he invented it.
+				The puzzle was actually created around 1874 by Noyes Palmer Chapman,
+				a postmaster in Canastota, New York.
+			</p>
+
+			<div id="w3c">
+				<a href="https://webster.cs.washington.edu/validate-html.php">
+					<img src="https://webster.cs.washington.edu/images/w3c-html.png" alt="Valid HTML" /></a>
+				<a href="https://webster.cs.washington.edu/validate-css.php">
+					<img src="https://webster.cs.washington.edu/images/w3c-css.png" alt="Valid CSS" /></a>
+				<a href="https://webster.cs.washington.edu/jslint/?referer">
+					<img src="https://webster.cs.washington.edu/images/w3c-js.png" alt="Valid JS" /></a>
+			</div>
+		</div>
+	</body>
+</html>
